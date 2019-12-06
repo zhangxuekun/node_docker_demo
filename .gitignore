@@ -1,0 +1,28 @@
+### Example user template template
+### Example user template
+.idea
+*.iml
+out
+gen
+.vscode/
+/node_modules
+*.log
+npm-debug.log
+npm-debug.log.*
+package-lock.json
+*.xml
+.logs/
+logs/
+/sea-modules/
+*.swp
+run/
+*-run/
+.DS_Store
+test/fixtures/antx/conf/
+*-tair.xml
+assembly
+.tmp/
+*.tmp
+*.lock
+.history
+.project

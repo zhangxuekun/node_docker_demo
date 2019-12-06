@@ -1,0 +1,14 @@
+{
+  "name": "node_docker_demo",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "author": "zhangxuekun",
+  "email":"zxktxj@163.com",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1"
+  }
+}
