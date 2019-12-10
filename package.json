@@ -6,9 +6,9 @@
   "email":"zxktxj@163.com",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "NODE_ENV=product node server.js",
+    "dev": "NODE_ENV=dev node server.js"
   },
   "dependencies": {
-    "express": "^4.16.1"
   }
 }
