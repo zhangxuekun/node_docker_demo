@@ -1,19 +1,26 @@
-FROM node:10
+    FROM node:10.0-alpine
 
-# Create app directory
-WORKDIR /usr/src/app
+    RUN apk --update add tzdata \
+        && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+        && echo "Asia/Shanghai" > /etc/timezone \
+        && apk del tzdata
 
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
-COPY package*.json ./
+    RUN mkdir -p /usr/src/nodejs/
 
-RUN npm install
-# If you are building your code for production
-# RUN npm ci --only=production
+    WORKDIR /usr/src/nodejs/
 
-# Bundle app source
-COPY . .
+    # add npm package
 
-EXPOSE 8090
-CMD [ "node", "server.js" ]
+    COPY package.json /usr/src/nodejs/package.json
+
+    RUN cd /usr/src/nodejs/
+
+    RUN npm i
+
+    # copy code
+
+    COPY . /usr/src/nodejs/
+
+    EXPOSE 8090
+
+    CMD npm run dev
