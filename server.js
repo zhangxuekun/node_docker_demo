@@ -3,7 +3,7 @@
 const http = require('http');
 const PORT = 30010;
 
-const server = http.createServer((req,res)=>{
+const server = http.createServer((req,res) => {
     let date = new Date();
     res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
     res.write('<h1>node_docker_demo <h1>');
@@ -12,6 +12,6 @@ const server = http.createServer((req,res)=>{
     res.end(`Hello Docker ,time:${date.toLocaleString()}`);
 })
 
-server.listen(PORT,()=>{
+server.listen(PORT,(req,res)=>{
     console.log(`Running on http://localhost:${PORT}, NODE_ENV=${ process.env.NODE_ENV}`,);
 });
