@@ -10,6 +10,7 @@
     "dev": "NODE_ENV=dev node server.js"
   },
   "dependencies": {
+    "consul": "^0.36.0",
     "ioredis": "^4.14.1"
   }
 }
