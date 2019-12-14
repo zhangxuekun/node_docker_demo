@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "Node.js on Docker",
   "author": "zhangxuekun",
-  "email":"zxktxj@163.com",
+  "email": "zxktxj@163.com",
   "main": "server.js",
   "scripts": {
     "start": "NODE_ENV=product node server.js",
     "dev": "NODE_ENV=dev node server.js"
   },
   "dependencies": {
+    "ioredis": "^4.14.1"
   }
 }
